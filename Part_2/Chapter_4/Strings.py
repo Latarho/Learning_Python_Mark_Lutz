@@ -31,7 +31,61 @@ print(S[0:3])
 print(S[:])
 
 # Конкатенация
+
 print(S + 'xyz')
 
 # Повторение
 print(S * 8)
+
+# Развернуть в список
+S = 'shrubbery'
+L = list(S)
+print(L)
+
+# Изменить на месте и объединить с пустым разделителем
+L[1] = 'c'
+print(''.join(L))
+
+# Гибрид байтов/списка
+B = bytearray(b'spam')
+B.extend(b'eggs')
+
+# Преобразовать в обычную строку
+print(B.decode())
+
+# Найти смещение подстроки в S (если не найдена, то -1)
+S = 'Spam'
+print(S.find('pa'))
+
+# Заменить вхождение подстроки в S другой подстрокой
+print(S.replace('pa', 'XYZ'))
+print(S)
+
+# Разбить по разделителю в список подстрок
+line = 'aaa,bbb,ccccc,dd'
+print(line.split(','))
+
+# Преобразовать в верхний и нижний регистры
+S = 'spam'
+print(S.upper())
+print(S.lower())
+
+# Проверить содержимое: isalpha, isdigit и т.д.
+print(S.isalpha())
+
+# Удалить пробелы с правой стороны
+line = 'aaa,bbb,ccccc,dd\n'
+print(line.rstrip())
+
+# Скомбинировать две операции
+print(line.rstrip().split(','))
+
+# Форматирование
+print('%s, eggs, and %s' % ('spam', 'SPAM!'))
+print('{}, eggs, and {}'.format('spam', 'SPAM!'))
+
+print(dir(S))
+
+# Конкатенация
+print(S + 'NI!')
+print(S.__add__('NI!'))
